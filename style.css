@@ -6,7 +6,7 @@ Description:	 Affiliate Site is a child theme of Bootstrap Basic4
 Author:			 Brandon Corlett
 Author URI:		 https://github.com/bcorlett201660/affiliate-theme-bootstrap
 Template:		 bootstrap-basic4
-Version:		 1.2.0
+Version:		 1.2.1
 Text Domain:	 affiliate-site-bootstrap
 */
 
@@ -19,5 +19,5 @@ Text Domain:	 affiliate-site-bootstrap
 }
 
 .test-2{
-    display: none;
+    display: none;s
 }
