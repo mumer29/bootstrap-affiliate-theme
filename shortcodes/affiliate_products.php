@@ -4,7 +4,7 @@ function affiliate_products_shortcode( $atts = [], $content = null) {
     $atts = array_change_key_case( (array) $atts, CASE_LOWER );
     $affiliate_posts_atts = shortcode_atts(
         array(
-            'taxonomy_slug' => 'products',
+            'taxonomy_slug' => '',
             'taxonomy_id' => '',
         ), $atts, $tag
     );
