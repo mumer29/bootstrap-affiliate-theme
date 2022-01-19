@@ -13,4 +13,14 @@
     return substr($string, $ini, $len);
 }
 
+
+/**
+ * Shortcodes
+ * Require all PHP files in the /shortcodes/ directory
+ */
+foreach (glob(get_template_directory() . "/shortcodes/*.php") as $shortcode) {
+    $shortcode= basename($shortcode);
+    require get_template_directory() . '/shortcodes/' . $shortcode;
+}
+
  ?>
