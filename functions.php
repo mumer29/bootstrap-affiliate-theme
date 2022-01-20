@@ -28,7 +28,16 @@ foreach (glob(get_stylesheet_directory() . "/functions/admin/notifications/*.php
     $function= basename($function);
     require get_stylesheet_directory() . '/functions/admin/notifications/' . $function;
 }
-    
+ 
+/**
+ * Custom Post Types
+ * Require all PHP files in the /functions/admin/custom_post_types/ directory
+ */
+foreach (glob(get_stylesheet_directory() . "/functions/admin/custom_post_types/*.php") as $function) {
+    $function= basename($function);
+    require get_stylesheet_directory() . '/functions/admin/custom_post_types/' . $function;
+}
+
  ?>
 
  
