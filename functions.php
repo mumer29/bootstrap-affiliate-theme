@@ -32,6 +32,14 @@ foreach (glob(get_stylesheet_directory() . "/functions/admin/taxonomies/*.php") 
     $function= basename($function);
     require get_stylesheet_directory() . '/functions/admin/taxonomies/' . $function;
 }
+
+foreach (glob(get_stylesheet_directory() . "/functions/admin/custom_fields/*.php") as $function) {
+    $function= basename($function);
+   require get_stylesheet_directory() . '/functions/admin/custom_fields/' . $function;
+}
+
+
+
  ?>
 
  
