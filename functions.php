@@ -12,32 +12,26 @@
     $len = strpos($string, $end, $ini) - $ini;
     return substr($string, $ini, $len);
 }
-/**
- * Shortcodes
- * Require all PHP files in the /shortcodes/ directory
- */
+
 foreach (glob(get_stylesheet_directory() . "/shortcodes/*.php") as $shotcode) {
     $shotcode= basename($shotcode);
     require get_stylesheet_directory() . '/shortcodes/' . $shotcode;
 }
-/**
- * Functions
- * Require all PHP files in the /functions/admin/notifications/ directory
- */
+
 foreach (glob(get_stylesheet_directory() . "/functions/admin/notifications/*.php") as $function) {
     $function= basename($function);
     require get_stylesheet_directory() . '/functions/admin/notifications/' . $function;
 }
  
-/**
- * Custom Post Types
- * Require all PHP files in the /functions/admin/custom_post_types/ directory
- */
 foreach (glob(get_stylesheet_directory() . "/functions/admin/custom_post_types/*.php") as $function) {
     $function= basename($function);
     require get_stylesheet_directory() . '/functions/admin/custom_post_types/' . $function;
 }
 
+foreach (glob(get_stylesheet_directory() . "/functions/admin/taxonomies/*.php") as $function) {
+    $function= basename($function);
+    require get_stylesheet_directory() . '/functions/admin/taxonomies/' . $function;
+}
  ?>
 
  
