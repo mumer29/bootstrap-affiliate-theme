@@ -13,12 +13,22 @@
     return substr($string, $ini, $len);
 }
 /**
- * Functions
- * Require all PHP files in the /functions/ directory
+ * Shortcodes
+ * Require all PHP files in the /shortcodes/ directory
  */
-foreach (glob(get_stylesheet_directory() . "/shortcodes/*.php") as $function) {
-    $function= basename($function);
-    require get_stylesheet_directory() . '/shortcodes/' . $function;
+foreach (glob(get_stylesheet_directory() . "/shortcodes/*.php") as $shotcode) {
+    $shotcode= basename($shotcode);
+    require get_stylesheet_directory() . '/shortcodes/' . $shotcode;
 }
-
+/**
+ * Functions
+ * Require all PHP files in the /functions/admin/notifications/ directory
+ */
+foreach (glob(get_stylesheet_directory() . "/functions/admin/notifications/*.php") as $function) {
+    $function= basename($function);
+    require get_stylesheet_directory() . '/functions/admin/notifications/' . $function;
+}
+    
  ?>
+
+ 
