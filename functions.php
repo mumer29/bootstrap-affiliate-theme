@@ -38,8 +38,9 @@ foreach (glob(get_stylesheet_directory() . "/functions/admin/custom_fields/*.php
    require get_stylesheet_directory() . '/functions/admin/custom_fields/' . $function;
 }
 
-
+foreach (glob(get_stylesheet_directory() . "/functions/admin/custom_fields/product_info/*.php") as $function) {
+    $function= basename($function);
+   require get_stylesheet_directory() . '/functions/admin/custom_fields/product_info/' . $function;
+}
 
  ?>
-
- 
