@@ -1,6 +1,6 @@
 <?php
 
-function custom_post_type_products() {
+function custom_post_type_product() {
  
 // Set UI labels for Custom Post Type
     $labels = array(
@@ -26,9 +26,9 @@ function custom_post_type_products() {
         'description'         => __( 'Product news and reviews', 'affiliate-theme-bootstrap' ),
         'labels'              => $labels,
         // Features this CPT supports in Post Editor
-        'supports'            => array( 'title', 'comments', 'revisions', 'custom-fields', ),
+        'supports'            => array( 'title', /*'comments', */'revisions', 'custom-fields', ),
         // You can associate this CPT with a taxonomy or custom taxonomy. 
-        'taxonomies'          => array( 'genres' ),
+        // 'taxonomies'          => array( 'genres' ),
         /* A hierarchical CPT is like Pages and can have
         * Parent and child items. A non-hierarchical CPT
         * is like Posts.
@@ -46,13 +46,11 @@ function custom_post_type_products() {
         'exclude_from_search' => true,
         'publicly_queryable'  => true,
         'capability_type'     => 'post',
-        'show_in_rest' => true,
-        'register_meta_box_cb' => 'wpt_add_product_metaboxes',
- 
+        'show_in_rest' => true, 
     );
      
     // Registering your Custom Post Type
-    register_post_type( 'Products', $args );
+    register_post_type( 'product', $args );
  
 }
  
@@ -61,6 +59,6 @@ function custom_post_type_products() {
 * unnecessarily executed. 
 */
  
-add_action( 'init', 'custom_post_type_products', 0 );
+add_action( 'init', 'custom_post_type_product', 0 );
 
 ?>

@@ -22,7 +22,7 @@ function create_price_nonhierarchical_taxonomy() {
     'menu_name' => __( 'Prices' ),
   ); 
   
-  register_taxonomy('price','products',array(
+  register_taxonomy('price','product',array(
     'hierarchical' => false,
     'labels' => $labels,
     'show_ui' => true,

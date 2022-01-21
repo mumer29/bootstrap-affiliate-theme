@@ -22,7 +22,7 @@ function create_brands_nonhierarchical_taxonomy() {
     'menu_name' => __( 'Brands' ),
   ); 
   
-  register_taxonomy('brands','products',array(
+  register_taxonomy('brands','product',array(
     'hierarchical' => false,
     'labels' => $labels,
     'show_ui' => true,

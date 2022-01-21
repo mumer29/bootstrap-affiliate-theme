@@ -19,7 +19,7 @@ function my_acf_add_local_field_groups_affiliate_urls() {
 				array (
 					'param' => 'post_type',
 					'operator' => '==',
-					'value' => 'products',
+					'value' => 'product',
 				),
 			),
 		),
