@@ -24,7 +24,7 @@ function create_manufacturers_nonhierarchical_taxonomy() {
  
 // Now register the non-hierarchical taxonomy like tag
  
-  register_taxonomy('manufacturers','product',array(
+  register_taxonomy('manufacturer','product',array(
     'hierarchical' => false,
     'labels' => $labels,
     'show_ui' => true,

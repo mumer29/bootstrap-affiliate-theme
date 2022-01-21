@@ -22,7 +22,7 @@ function create_quantities_nonhierarchical_taxonomy() {
     'menu_name' => __( 'Quantities' ),
   ); 
   
-  register_taxonomy('quantities','product',array(
+  register_taxonomy('quantity','product',array(
     'hierarchical' => false,
     'labels' => $labels,
     'show_ui' => true,
