@@ -1,6 +1,8 @@
 <?php
 add_shortcode('affiliate_products', 'affiliate_products_shortcode');
-function affiliate_products_shortcode( $atts = []) {
+function affiliate_products_shortcode( $atts = [], $content = null, $tag = '' ) {
+	$atts = array_change_key_case( (array) $atts, CASE_LOWER );
+
 	$affiliate_products_atts = shortcode_atts(
         array(
             'taxonomy_slug' => '',
@@ -19,8 +21,7 @@ function affiliate_products_shortcode( $atts = []) {
 	}
 	$json = file_get_contents($json_url);
 	$array = json_decode($json,true);
-	/*
-	echo '<div class="row m-0">';
+	$content = '  <div class="row m-0">';
 	foreach($array as $item) {
 		$learn_url=$item['link'];
 		$buy_url=$item['acf']['amazon_url'];
@@ -33,19 +34,19 @@ function affiliate_products_shortcode( $atts = []) {
 		//$image_1_url = $image_1_array['guid']['rendered'];
 		$image_1_url = $image_1_array['media_details']['sizes']['full']['source_url'];
 		$manufacturer_id = $item['manufacturer'][0];
-		echo'<div class="col-sm-12 col-md-6 col-lg-4">';
-		echo '<div class="card mt-3">';
-		echo '<a class="" href="'.$learn_url.'" role="button"><img class="card-img-top p-1" src="'.$image_1_url.'" alt="" /></a>';
-		echo '<div class="card-body"><a class="" href="'.$learn_url.'" role="button"><h5 class="card-title">' .   $title . '</h5></a>';
-		echo '    <p class="card-text"><small class="text-muted">by '.do_shortcode('[affiliate_manufacturer_name manufacturer_id="'.$manufacturer_id.'"]').'</small></p>';
-		echo'<p class="font-weight-bold">$'.$price .'</p>';
-		echo '<a class="btn btn-warning btn-block" href="'.$learn_url.'" role="button">Learn More</a>';
-		echo '<a class="btn btn-danger btn-block" href="'.$buy_url.'" role="button" target="_blank">Buy Now</a>';
-		echo '</div>';
-		echo '</div>';
-		echo '</div>';
+		$content .='<div class="col-sm-12 col-md-6 col-lg-4">';
+		$content .= '<div class="card mt-3">';
+		$content .= '<a class="" href="'.$learn_url.'" role="button"><img class="card-img-top p-1" src="'.$image_1_url.'" alt="" /></a>';
+		$content .= '<div class="card-body"><a class="" href="'.$learn_url.'" role="button"><h5 class="card-title">' .   $title . '</h5></a>';
+		$content .= '    <p class="card-text"><small class="text-muted">by '.do_shortcode('[affiliate_manufacturer_name manufacturer_id="'.$manufacturer_id.'"]').'</small></p>';
+		$content .='<p class="font-weight-bold">'.$price .'</p>';
+		$content .= '<a class="btn btn-warning btn-block" href="'.$learn_url.'" role="button">Learn More</a>';
+		$content .= '<a class="btn btn-danger btn-block" href="'.$buy_url.'" role="button" target="_blank">Buy Now</a>';
+		$content .= '</div>';
+		$content .= '</div>';
+		$content .= '</div>';
 	}
-	echo '</div>';
-*/
+	$content .= '</div>';
+	return $content;
 }
 ?>

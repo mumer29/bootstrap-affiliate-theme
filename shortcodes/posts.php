@@ -14,28 +14,30 @@ function affiliate_posts_shortcode( $atts = [], $content = null) {
 	}
 	$json = file_get_contents($json_url);
 	$array = json_decode($json,true);
-
-	echo '  <div class="row m-0">';
-foreach($array as $item) {
-    $url=$item['link'];
-	 $title=$item['title']['rendered'];
-	$excerpt=$item['excerpt']['rendered'];
-	$media_id = $item['featured_media'];
-	$image_url = do_shortcode('[affiliate_media_url media_id="'.$media_id.'"]');
-	echo '<div class="card mb-3">';
-    if($image_url){  
-	echo '<img class="card-img-top" src="'.$image_url.'" alt="">';
+    
+	$content = '<div class="row m-0">';
+	
+	foreach($array as $item) {
+		$url=$item['link'];
+		 $title=$item['title']['rendered'];
+		$excerpt=$item['excerpt']['rendered'];
+		$media_id = $item['featured_media'];
+		$image_url = do_shortcode('[affiliate_media_url media_id="'.$media_id.'"]');
+		$content .= '<div class="card mb-3">';
+		if($image_url){  
+		$content .= '<img class="card-img-top" src="'.$image_url.'" alt="">';
+		}
+		  $content .= '
+			  <div class="card-body">
+			<h5 class="card-title">'.$title.'</h5>
+			<p class="card-text">'.$excerpt.'</p>
+			<a class="btn btn-primary" href='.$url.'>Read More</a>
+		  </div>
+		</div>';
+	
 	}
-      echo '
-		  <div class="card-body">
-        <h5 class="card-title">'.$title.'</h5>
-        <p class="card-text">'.$excerpt.'</p>
-		<a class="btn btn-primary" href='.$url.'>Read More</a>
-      </div>
-    </div>';
-
+	$content .= '</div>';
+	return $content;
 }
-echo '</div>';
 
-}
 ?>

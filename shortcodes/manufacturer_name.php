@@ -11,6 +11,6 @@ function affiliate_manufacturer_name_shortcode( $atts = [], $content = null) {
 	$manufacturer_content = file_get_contents($uri .'/wp-json/wp/v2/manufacturer/'. $manufacturer_id);
     $manufacturer_array = json_decode($manufacturer_content,true);
 	$manufacturer_name = $manufacturer_array['name'];
-    echo $manufacturer_name;
+    return $manufacturer_name;
 }
 ?>

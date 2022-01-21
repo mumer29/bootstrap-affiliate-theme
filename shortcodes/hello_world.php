@@ -48,7 +48,7 @@ function hello_world_shortcode( $atts = [], $content = null, $tag = '' ) {
     $o .= '</div>';
  
     // return output
-    echo $o;
+    return $o;
 }
  
 /**

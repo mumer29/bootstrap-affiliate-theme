@@ -11,6 +11,6 @@ function affiliate_brand_name_shortcode( $atts = [], $content = null) {
 	$brand_content = file_get_contents($uri .'/wp-json/wp/v2/brand/'. $brand_id);
     $brand_array = json_decode($brand_content,true);
 	$brand_name = $brand_array['name'];
-    echo $brand_name;
+    return $brand_name;
 }
 ?>

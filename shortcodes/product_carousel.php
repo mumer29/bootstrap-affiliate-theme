@@ -98,137 +98,107 @@ if($image_10_id){
   $image_10_thumb_url = $image_10_array['media_details']['sizes']['thumbnail']['source_url'];
   }
   
-  
-?>
+$content = '<div id="carouselProduct" class="carousel slide" data-ride="carousel"><ol class="carousel-indicators">';
 
-                                               <div id="carouselProduct" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-  <?php if($image_2_id){ ?>   <li data-target="#carouselProduct" data-slide-to="0" class="active"></li> <?php }?>
-  <?php if($image_2_id){ ?>   <li data-target="#carouselProduct" data-slide-to="1"></li><?php }?>
-    <?php if($image_3_id){ ?> <li data-target="#carouselProduct" data-slide-to="2"></li><?php }?>
-    <?php if($image_4_id){ ?> <li data-target="#carouselProduct" data-slide-to="3"></li><?php }?>
-    <?php if($image_5_id){ ?> <li data-target="#carouselProduct" data-slide-to="4"></li><?php }?>
-    <?php if($image_6_id){ ?> <li data-target="#carouselProduct" data-slide-to="5"></li><?php }?>
-    <?php if($image_7_id){ ?> <li data-target="#carouselProduct" data-slide-to="6"></li><?php }?>
-    <?php if($image_8_id){ ?> <li data-target="#carouselProduct" data-slide-to="7"></li><?php }?>
-    <?php if($image_9_id){ ?> <li data-target="#carouselProduct" data-slide-to="8"></li><?php }?>
-    <?php if($image_10_id){ ?> <li data-target="#carouselProduct" data-slide-to="9"></li><?php }?>
-  </ol>
-  <div class="carousel-inner">
-  <?php if($image_1_id){ ?>  
-  <div class="carousel-item active">
-      <img src="<?php echo $image_1_url;?>" class="d-block w-100" alt="...">
-    </div> <?php }?>
-  <?php if($image_2_id){ ?>
-    <div class="carousel-item">
-      <img src="<?php echo $image_2_url;?>" class="d-block w-100" alt="...">
-    </div> <?php }?>
-  <?php if($image_3_id){ ?>
-    <div class="carousel-item">
-      <img src="<?php echo $image_3_url;?>" class="d-block w-100" alt="...">
-    </div> <?php }?>
-  <?php if($image_4_id){ ?>
-    <div class="carousel-item">
-      <img src="<?php echo $image_4_url;?>" class="d-block w-100" alt="...">
-    </div> <?php }?>
-  <?php if($image_5_id){ ?>
-    <div class="carousel-item">
-      <img src="<?php echo $image_5_url;?>" class="d-block w-100" alt="...">
-    </div> <?php }?>
-  <?php if($image_6_id){ ?>
-    <div class="carousel-item">
-      <img src="<?php echo $image_6_url;?>" class="d-block w-100" alt="...">
-    </div> <?php }?>
-  <?php if($image_7_id){ ?>
-    <div class="carousel-item">
-      <img src="<?php echo $image_7_url;?>" class="d-block w-100" alt="...">
-    </div> <?php }?>
-  <?php if($image_8_id){ ?>
-    <div class="carousel-item">
-      <img src="<?php echo $image_8_url;?>" class="d-block w-100" alt="...">
-    </div> <?php }?>
-    <?php if($image_9_id){ ?>
-    <div class="carousel-item">
-      <img src="<?php echo $image_9_url;?>" class="d-block w-100" alt="...">
-    </div> <?php }?>
-    <?php if($image_10_id){ ?>
-    <div class="carousel-item">
-      <img src="<?php echo $image_10_url;?>" class="d-block w-100" alt="...">
-    </div> <?php }?>
-  </div>
-  <?php if($image_2_id){ ?> 
-  <a class="carousel-control-prev" href="#carouselProduct" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselProduct" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  <?php }?>
-</div>
-<div class="row m-0 pt-3">
-<?php if($image_2_id){ ?>  
-<div class="col-3"><a data-target="#carouselProduct" data-slide-to="0" href="#">
-<img src="<?php echo $image_1_thumb_url;?>" class="d-block w-100 mb-3" alt="...">
-</a>
-  </div>
-  <?php }?>
-  <?php if($image_2_id){ ?>  
-  <div class="col-3">
-  <a data-target="#carouselProduct" data-slide-to="1" href="#">
-<img src="<?php echo $image_2_thumb_url;?>" class="d-block w-100 mb-3" alt="..."></a>
-  </div>
-  <?php }?>
-  <?php if($image_3_id){ ?>  
-  <div class="col-3">
-  <a data-target="#carouselProduct" data-slide-to="2" href="#">
-<img src="<?php echo $image_3_thumb_url;?>" class="d-block w-100 mb-3" alt="..."></a>
-  </div>
-  <?php }?>
-  <?php if($image_4_id){ ?>  
-  <div class="col-3">
-  <a data-target="#carouselProduct" data-slide-to="3" href="#">
-<img src="<?php echo $image_4_thumb_url;?>" class="d-block w-100 mb-3" alt="..."></a>
-  </div>
-  <?php }?>
-  <?php if($image_5_id){ ?>  
-  <div class="col-3">
-  <a data-target="#carouselProduct" data-slide-to="4" href="#">
-<img src="<?php echo $image_5_thumb_url;?>" class="d-block w-100 mb-3" alt="..."></a>
-  </div>
-  <?php }?>
-  <?php if($image_6_id){ ?>  
-  <div class="col-3">
-  <a data-target="#carouselProduct" data-slide-to="5" href="#">
-<img src="<?php echo $image_6_thumb_url;?>" class="d-block w-100 mb-3" alt="..."></a>
-  </div>
-  <?php }?>
-  <?php if($image_7_id){ ?>  
-  <div class="col-3">
-  <a data-target="#carouselProduct" data-slide-to="6" href="#">
-<img src="<?php echo $image_7_thumb_url;?>" class="d-block w-100 mb-3" alt="..."></a>
-  </div>
-  <?php }?>
-  <?php if($image_8_id){ ?>  
-  <div class="col-3">
-  <a data-target="#carouselProduct" data-slide-to="7" href="#">
-<img src="<?php echo $image_8_thumb_url;?>" class="d-block w-100 mb-3" alt="..."></a>
-  </div>
-  <?php }?>
-  <?php if($image_9_id){ ?>  
-  <div class="col-3">
-  <a data-target="#carouselProduct" data-slide-to="8" href="#">
-<img src="<?php echo $image_9_thumb_url;?>" class="d-block w-100 mb-3" alt="..."></a>
-  </div>
-  <?php }?>
-  <?php if($image_10_id){ ?>  
-  <div class="col-3">
-  <a data-target="#carouselProduct" data-slide-to="9" href="#">
-<img src="<?php echo $image_10_thumb_url;?>" class="d-block w-100 mb-3" alt="..."></a>
-  </div>
-  <?php }?>
-  </div>
-<?php
+if($image_2_id){ 
+  $content .= '<li data-target="#carouselProduct" data-slide-to="0" class="active"></li>';
+}
+if($image_2_id){
+  $content .= '<li data-target="#carouselProduct" data-slide-to="1"></li>';
+}
+if($image_3_id){
+  $content .= '<li data-target="#carouselProduct" data-slide-to="2"></li>';
+}
+if($image_4_id){
+  $content .= '<li data-target="#carouselProduct" data-slide-to="3"></li>';
+}
+if($image_5_id){
+  $content .= '<li data-target="#carouselProduct" data-slide-to="4"></li>';
+}
+if($image_6_id){
+  $content .= '<li data-target="#carouselProduct" data-slide-to="5"></li>';
+}
+if($image_7_id){
+  $content .= '<li data-target="#carouselProduct" data-slide-to="6"></li>';
+}
+if($image_8_id){
+  $content .= '<li data-target="#carouselProduct" data-slide-to="7"></li>';
+}
+if($image_9_id){
+  $content .= '<li data-target="#carouselProduct" data-slide-to="8"></li>';
+}
+if($image_10_id){
+  $content .= '<li data-target="#carouselProduct" data-slide-to="9"></li>';
+}
+$content .= '</ol>';
+$content .= '<div class="carousel-inner">';
+
+if($image_1_id){
+  $content .= '<div class="carousel-item active"><img src="'.$image_1_url.'" class="d-block w-100" alt="..."></div>';
+}
+if($image_2_id){
+  $content .= '<div class="carousel-item"><img src="'.$image_2_url.'" class="d-block w-100" alt="..."></div>';
+}
+if($image_3_id){
+  $content .= '<div class="carousel-item"><img src="'.$image_3_url.'" class="d-block w-100" alt="..."></div>';
+}
+if($image_4_id){
+  $content .= '<div class="carousel-item"><img src="'.$image_4_url.'" class="d-block w-100" alt="..."></div>';
+}
+if($image_5_id){
+  $content .= '<div class="carousel-item"><img src="'.$image_5_url.'" class="d-block w-100" alt="..."></div>';
+}
+if($image_6_id){
+  $content .= '<div class="carousel-item"><img src="'.$image_6_url.'" class="d-block w-100" alt="..."></div>';
+}
+if($image_7_id){
+  $content .= '<div class="carousel-item"><img src="'.$image_7_url.'" class="d-block w-100" alt="..."></div>';
+}
+if($image_8_id){
+  $content .= '<div class="carousel-item"><img src="'.$image_8_url.'" class="d-block w-100" alt="..."></div>';
+}
+if($image_9_id){
+  $content .= '<div class="carousel-item"><img src="'.$image_9_url.'" class="d-block w-100" alt="..."></div>';
+}
+if($image_10_id){
+  $content .= '<div class="carousel-item"><img src="'.$image_10_url.'" class="d-block w-100" alt="..."></div>';
+}
+if($image_2_id){
+  $content .= '<a class="carousel-control-prev" href="#carouselProduct" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carouselProduct" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>';
+}
+$content .= '</div>';
+$content .= '<div class="row m-0 pt-3">';
+if($image_2_id){
+$content .= '<div class="col-3"><a data-target="#carouselProduct" data-slide-to="0" href="#"><img src="'.$image_1_thumb_url.'" class="d-block w-100 mb-3" alt="..."></a></div>';
+}
+if($image_2_id){
+  $content .= '<div class="col-3"><a data-target="#carouselProduct" data-slide-to="1" href="#"><img src="'.$image_2_thumb_url.'" class="d-block w-100 mb-3" alt="..."></a></div>';
+}
+if($image_3_id){
+  $content .= '<div class="col-3"><a data-target="#carouselProduct" data-slide-to="2" href="#"><img src="'.$image_3_thumb_url.'" class="d-block w-100 mb-3" alt="..."></a></div>';
+}
+if($image_4_id){
+  $content .= '<div class="col-3"><a data-target="#carouselProduct" data-slide-to="3" href="#"><img src="'.$image_4_thumb_url.'" class="d-block w-100 mb-3" alt="..."></a></div>';
+}
+if($image_5_id){
+  $content .= '<div class="col-3"><a data-target="#carouselProduct" data-slide-to="4" href="#"><img src="'.$image_5_thumb_url.'" class="d-block w-100 mb-3" alt="..."></a></div>';
+  }
+if($image_6_id){
+  $content .= '<div class="col-3"><a data-target="#carouselProduct" data-slide-to="5" href="#"><img src="'.$image_6_thumb_url.'" class="d-block w-100 mb-3" alt="..."></a></div>';
+}
+if($image_7_id){
+  $content .= '<div class="col-3"><a data-target="#carouselProduct" data-slide-to="6" href="#"><img src="'.$image_7_thumb_url.'" class="d-block w-100 mb-3" alt="..."></a></div>';
+}
+if($image_8_id){
+  $content .= '<div class="col-3"><a data-target="#carouselProduct" data-slide-to="7" href="#"><img src="'.$image_8_thumb_url.'" class="d-block w-100 mb-3" alt="..."></a></div>';
+}
+if($image_9_id){
+  $content .= '<div class="col-3"><a data-target="#carouselProduct" data-slide-to="8" href="#"><img src="'.$image_9_thumb_url.'" class="d-block w-100 mb-3" alt="..."></a></div>';
+}
+if($image_10_id){
+  $content .= '<div class="col-3"><a data-target="#carouselProduct" data-slide-to="9" href="#"><img src="'.$image_10_thumb_url.'" class="d-block w-100 mb-3" alt="..."></a></div>';
+}  
+$content .= '</div>';
+return $content;
 }
 ?>
