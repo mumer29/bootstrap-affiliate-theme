@@ -5,9 +5,9 @@
  		  } 
  		  
 
-foreach (glob(get_stylesheet_directory() . "/shortcodes/*.php") as $shotcode) {
+foreach (glob(get_stylesheet_directory() . "/functions/shortcodes/*.php") as $shotcode) {
     $shotcode= basename($shotcode);
-    require get_stylesheet_directory() . '/shortcodes/' . $shotcode;
+    require get_stylesheet_directory() . '/functions/shortcodes/' . $shotcode;
 }
 
 foreach (glob(get_stylesheet_directory() . "/functions/admin/notifications/*.php") as $function) {
