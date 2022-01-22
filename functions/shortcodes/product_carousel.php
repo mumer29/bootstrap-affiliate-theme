@@ -198,7 +198,7 @@ if($image_9_id){
 if($image_10_id){
   $content .= '<div class="col-3"><a data-target="#carouselProduct" data-slide-to="9" href="#"><img src="'.$image_10_thumb_url.'" class="d-block w-100 mb-3" alt="..."></a></div>';
 }  
-$content .= '</div>';
+$content .= '</div></div>';
 return $content;
 }
 ?>
