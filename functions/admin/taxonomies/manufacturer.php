@@ -35,5 +35,5 @@ function create_manufacturers_nonhierarchical_taxonomy() {
     'rewrite' => array( 'slug' => 'manufacturer' ),
   ));
 }
-
+flush_rewrite_rules();
 ?>

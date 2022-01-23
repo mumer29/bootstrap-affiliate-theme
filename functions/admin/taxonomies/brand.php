@@ -33,5 +33,6 @@ function create_brands_nonhierarchical_taxonomy() {
     'rewrite' => array( 'slug' => 'brand' ),
   ));
 }
+flush_rewrite_rules();
 
 ?>

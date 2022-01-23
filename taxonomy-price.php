@@ -26,7 +26,7 @@ $taxonomy_slug="price";
 
                     <?php 
                     if($taxonomy_id && $taxonomy_slug){
-                      echo do_shortcode('[products taxonomy_slug="'.$taxonomy_slug.'" taxonomy_id="'.$taxonomy_id.'"]');
+                      echo do_shortcode('[affiliate_products taxonomy_slug="'.$taxonomy_slug.'" taxonomy_id="'.$taxonomy_id.'"]');
                     }
                     ?> 
                 </main>

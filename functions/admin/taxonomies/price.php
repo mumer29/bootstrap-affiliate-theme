@@ -33,5 +33,5 @@ function create_price_nonhierarchical_taxonomy() {
     'rewrite' => array( 'slug' => 'price' ),
   ));
 }
-
+flush_rewrite_rules();
 ?>

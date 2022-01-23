@@ -33,5 +33,5 @@ function create_quantities_nonhierarchical_taxonomy() {
     'rewrite' => array( 'slug' => 'quantity' ),
   ));
 }
-
+flush_rewrite_rules();
 ?>
