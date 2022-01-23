@@ -30,7 +30,7 @@ function create_quantities_nonhierarchical_taxonomy() {
     'show_admin_column' => true,
     'update_count_callback' => '_update_post_term_count',
     'query_var' => true,
-    'rewrite' => array( 'slug' => 'topic' ),
+    'rewrite' => array( 'slug' => 'quantity' ),
   ));
 }
 
