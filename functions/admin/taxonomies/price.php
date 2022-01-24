@@ -34,4 +34,12 @@ function create_price_nonhierarchical_taxonomy() {
   ));
 }
 flush_rewrite_rules();
+add_action( 'template_redirect', 'fallback_custom_taxonomy_price' );
+function fallback_custom_taxonomy_price() {
+  $url = $_SERVER[ 'REQUEST_URI' ];
+  if ( ! is_tax( 'price' ) && substr( $url, -6 ) == '/price' || substr( $url, -7 ) == '/price/' ) {
+    include( get_template_directory() . '/taxonomy-price.php' );
+    exit();
+  };
+}; 
 ?>

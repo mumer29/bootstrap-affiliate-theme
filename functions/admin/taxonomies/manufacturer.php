@@ -32,8 +32,16 @@ function create_manufacturers_nonhierarchical_taxonomy() {
     'show_admin_column' => true,
     'update_count_callback' => '_update_post_term_count',
     'query_var' => true,
-    'rewrite' => array( 'slug' => 'manufacturer' ),
+    'rewrite' => array( 'slug' => 'products/manufacturer' ),
   ));
 }
 flush_rewrite_rules();
+add_action( 'template_redirect', 'fallback_custom_taxonomy_manufacturers' );
+function fallback_custom_taxonomy_manufacturers() {
+  $url = $_SERVER[ 'REQUEST_URI' ];
+  if ( ! is_tax( 'manufacturer' ) && substr( $url, -13 ) == '/manufacturer' || substr( $url, -14 ) == '/manufacturer/' ) {
+    include( get_template_directory() . '/taxonomy-manufacturer.php' );
+    exit();
+  };
+}; 
 ?>

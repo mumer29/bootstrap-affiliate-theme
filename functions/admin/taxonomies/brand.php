@@ -30,9 +30,16 @@ function create_brands_nonhierarchical_taxonomy() {
     'show_admin_column' => true,
     'update_count_callback' => '_update_post_term_count',
     'query_var' => true,
-    'rewrite' => array( 'slug' => 'brand' ),
+    'rewrite' => array( 'slug' => 'products/brand'),
   ));
 }
 flush_rewrite_rules();
-
+add_action( 'template_redirect', 'fallback_custom_taxonomy_brands' );
+function fallback_custom_taxonomy_brands() {
+  $url = $_SERVER[ 'REQUEST_URI' ];
+  if ( ! is_tax( 'brand' ) && substr( $url, -6 ) == '/brand' || substr( $url, -7 ) == '/brand/' ) {
+    include( get_template_directory() . '/taxonomy-brand.php' );
+    exit();
+  };
+}; 
 ?>

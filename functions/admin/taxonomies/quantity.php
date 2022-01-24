@@ -30,8 +30,16 @@ function create_quantities_nonhierarchical_taxonomy() {
     'show_admin_column' => true,
     'update_count_callback' => '_update_post_term_count',
     'query_var' => true,
-    'rewrite' => array( 'slug' => 'quantity' ),
+    'rewrite' => array( 'slug' => 'products/quantity' ),
   ));
 }
 flush_rewrite_rules();
+add_action( 'template_redirect', 'fallback_custom_taxonomy_quantity' );
+function fallback_custom_taxonomy_quantity() {
+  $url = $_SERVER[ 'REQUEST_URI' ];
+  if ( ! is_tax( 'quantity' ) && substr( $url, -9 ) == '/quantity' || substr( $url, -10 ) == '/quantity/' ) {
+    include( get_template_directory() . '/taxonomy-quantity.php' );
+    exit();
+  };
+}; 
 ?>
