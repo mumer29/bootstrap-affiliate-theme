@@ -32,7 +32,7 @@ function affiliate_products_shortcode( $atts = [], $content = null, $tag = '' ) 
 		$image_1_array = file_get_contents($uri.'/wp-json/wp/v2/media/'. $image_1_id);
 		$image_1_array = json_decode($image_1_array,true);
 		//$image_1_url = $image_1_array['guid']['rendered'];
-		$image_1_url = $image_1_array['media_details']['sizes']['full']['source_url'];
+		$image_1_url = $image_1_array['media_details']['sizes']['affiliate-theme-square-small']['source_url'];
 		$manufacturer_id = $item['manufacturer'][0];
 		$content .='<div class="col-sm-12 col-md-6 col-lg-4">';
 		$content .= '<div class="card mt-3">';
