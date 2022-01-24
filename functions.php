@@ -3,7 +3,7 @@
 	 function affiliate_site_enqueue_styles() {
  		  wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' ); 
  		  } 
- 		  
+// include .php from core/functions/*/*.php
            function require_all_files($dir) {
             foreach( glob( "$dir/*" ) as $path ){
                 if ( preg_match( '/\.php$/', $path ) ) {
@@ -14,5 +14,6 @@
             }
         }
         
-        require_all_files( get_stylesheet_directory() . "/core" );
- ?>
+        require_all_files( get_stylesheet_directory() . "/core/functions" );
+
+?>
