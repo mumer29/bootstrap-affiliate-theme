@@ -4,26 +4,26 @@ function custom_post_type_product() {
  
 // Set UI labels for Custom Post Type
     $labels = array(
-        'name'                => _x( 'Products', 'Post Type General Name', 'bootstrap-affiliate-theme' ),
-        'singular_name'       => _x( 'Product', 'Post Type Singular Name', 'bootstrap-affiliate-theme' ),
-        'menu_name'           => __( 'Products', 'bootstrap-affiliate-theme' ),
-        'parent_item_colon'   => __( 'Parent Product', 'bootstrap-affiliate-theme' ),
-        'all_items'           => __( 'All Products', 'bootstrap-affiliate-theme' ),
-        'view_item'           => __( 'View Product', 'bootstrap-affiliate-theme' ),
-        'add_new_item'        => __( 'Add New Product', 'bootstrap-affiliate-theme' ),
-        'add_new'             => __( 'Add New', 'bootstrap-affiliate-theme' ),
-        'edit_item'           => __( 'Edit Product', 'bootstrap-affiliate-theme' ),
-        'update_item'         => __( 'Update Product', 'bootstrap-affiliate-theme' ),
-        'search_items'        => __( 'Search Product', 'bootstrap-affiliate-theme' ),
-        'not_found'           => __( 'Not Found', 'bootstrap-affiliate-theme' ),
-        'not_found_in_trash'  => __( 'Not found in Trash', 'bootstrap-affiliate-theme' ),
+        'name'                => _x( 'Products', 'Post Type General Name', 'bootstrap-affiliate' ),
+        'singular_name'       => _x( 'Product', 'Post Type Singular Name', 'bootstrap-affiliate' ),
+        'menu_name'           => __( 'Products', 'bootstrap-affiliate' ),
+        'parent_item_colon'   => __( 'Parent Product', 'bootstrap-affiliate' ),
+        'all_items'           => __( 'All Products', 'bootstrap-affiliate' ),
+        'view_item'           => __( 'View Product', 'bootstrap-affiliate' ),
+        'add_new_item'        => __( 'Add New Product', 'bootstrap-affiliate' ),
+        'add_new'             => __( 'Add New', 'bootstrap-affiliate' ),
+        'edit_item'           => __( 'Edit Product', 'bootstrap-affiliate' ),
+        'update_item'         => __( 'Update Product', 'bootstrap-affiliate' ),
+        'search_items'        => __( 'Search Product', 'bootstrap-affiliate' ),
+        'not_found'           => __( 'Not Found', 'bootstrap-affiliate' ),
+        'not_found_in_trash'  => __( 'Not found in Trash', 'bootstrap-affiliate' ),
     );
      
 // Set other options for Custom Post Type
      
     $args = array(
-        'label'               => __( 'Products', 'bootstrap-affiliate-theme' ),
-        'description'         => __( 'Product news and reviews', 'bootstrap-affiliate-theme' ),
+        'label'               => __( 'Products', 'bootstrap-affiliate' ),
+        'description'         => __( 'Product news and reviews', 'bootstrap-affiliate' ),
         'labels'              => $labels,
         // Features this CPT supports in Post Editor
         'supports'            => array( 'title', /*'comments', */'revisions', 'custom-fields', ),

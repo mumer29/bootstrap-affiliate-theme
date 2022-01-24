@@ -6,7 +6,7 @@
  * These archive can override by each archive file name such as category will be override by category.php.<br>
  * To learn more, please read on this link. https://developer.wordpress.org/themes/basics/template-hierarchy/
  * 
- * @package bootstrap-basic4
+ * @package bootstrap-affiliate
  */
 
 

@@ -2,7 +2,7 @@
 /**
  * The theme header.
  * 
- * @package bootstrap-basic4
+ * @package bootstrap-affiliate
  */
 
 $container_class = apply_filters('bootstrap_basic4_container_class', 'container');
@@ -18,9 +18,8 @@ if (!is_scalar($container_class) || empty($container_class)) {
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <link rel="profile" href="http://gmpg.org/xfn/11" />
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+
         <!--WordPress head-->
         <?php wp_head(); ?> 
         <!--end WordPress head-->
@@ -46,7 +45,7 @@ if (!is_scalar($container_class) || empty($container_class)) {
                     </div>
                     <div class="col-md-6 page-header-top-right">
                         <div class="sr-only">
-                            <a href="#content" title="<?php esc_attr_e('Skip to content', 'bootstrap-basic4'); ?>"><?php _e('Skip to content', 'bootstrap-basic4'); ?></a>
+                            <a href="#content" title="<?php esc_attr_e('Skip to content', 'bootstrap-affiliate'); ?>"><?php _e('Skip to content', 'bootstrap-affiliate'); ?></a>
                         </div>
                         <?php if (is_active_sidebar('header-right')) { ?> 
                         <div class="float-right">
@@ -60,23 +59,23 @@ if (!is_scalar($container_class) || empty($container_class)) {
                 <div class="row main-navigation">
                     <div class="col-md-12">
                         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bootstrap-basic4-topnavbar" aria-controls="bootstrap-basic4-topnavbar" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'bootstrap-basic4'); ?>">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bootstrap-affiliate-topnavbar" aria-controls="bootstrap-affiliate-topnavbar" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'bootstrap-affiliate'); ?>">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
-                            <div id="bootstrap-basic4-topnavbar" class="collapse navbar-collapse">
+                            <div id="bootstrap-affiliate-topnavbar" class="collapse navbar-collapse">
                                 <?php 
                                 wp_nav_menu(
-                                    array(
+                                    [
                                         'depth' => '2',
                                         'theme_location' => 'primary', 
                                         'container' => false, 
                                         'menu_id' => 'bb4-primary-menu',
                                         'menu_class' => 'navbar-nav mr-auto', 
                                         'walker' => new \BootstrapBasic4\BootstrapBasic4WalkerNavMenu()
-                                    )
+                                    ]
                                 ); 
                                 ?> 
-                                <div class="float-md-right">
+                                <div class="float-lg-right">
                                     <?php dynamic_sidebar('navbar-right'); ?> 
                                 </div>
                                 <div class="clearfix"></div>

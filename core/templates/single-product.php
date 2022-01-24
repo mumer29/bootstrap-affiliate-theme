@@ -15,8 +15,8 @@ $price=$array['acf']['price'];
 $long_desciption=$array['acf']['long_description'];
 $amazon_url=$array['acf']['amazon_url'];
 $brand_id= $array['brand']['0'];
-$brand_name = do_shortcode('[affiliate_brand_name brand_id="'.$brand_id.'"]');
-$brand_link = do_shortcode('[affiliate_brand_link brand_id="'.$brand_id.'"]');
+$brand_name = do_shortcode('[aff_brand_name brand_id="'.$brand_id.'"]');
+$brand_link = do_shortcode('[aff_brand_link brand_id="'.$brand_id.'"]');
 
 $image_1_id = $array['acf']['image_1'];
 $image_2_id = $array['acf']['image_2'];
@@ -29,9 +29,9 @@ $image_8_id = $array['acf']['image_8'];
 $image_9_id = $array['acf']['image_9'];
 $image_10_id = $array['acf']['image_10'];
  
-$product_carousel = do_shortcode('[affiliate_product_carousel image_1_id="'.$image_1_id.'" image_2_id="'.$image_2_id.'" image_3_id="'.$image_3_id.'" image_4_id="'.$image_4_id.'" image_5_id="'.$image_5_id.'" image_6_id="'.$image_6_id.'" image_7_id="'.$image_7_id.'" image_8_id="'.$image_8_id.'" image_9_id="'.$image_9_id.'" image_10_id="'.$image_10_id.'"]');
+$product_carousel = do_shortcode('[aff_product_carousel image_1_id="'.$image_1_id.'" image_2_id="'.$image_2_id.'" image_3_id="'.$image_3_id.'" image_4_id="'.$image_4_id.'" image_5_id="'.$image_5_id.'" image_6_id="'.$image_6_id.'" image_7_id="'.$image_7_id.'" image_8_id="'.$image_8_id.'" image_9_id="'.$image_9_id.'" image_10_id="'.$image_10_id.'"]');
 
-$related_products = do_shortcode('[affiliate_products]');
+$related_products = do_shortcode('[aff_products]');
 
  $content = '<div class="row m-0">
  <div class="col-12 col-md-4">

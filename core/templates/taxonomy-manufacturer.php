@@ -6,7 +6,7 @@
  * These archive can override by each archive file name such as category will be override by category.php.<br>
  * To learn more, please read on this link. https://developer.wordpress.org/themes/basics/template-hierarchy/
  * 
- * @package bootstrap-basic4
+ * @package bootstrap-affiliate
  */
 
 
@@ -26,7 +26,7 @@ $taxonomy_slug="manufacturer";
 
                     <?php 
                     if($taxonomy_id && $taxonomy_slug){
-                      echo do_shortcode('[affiliate_products taxonomy_slug="'.$taxonomy_slug.'" taxonomy_id="'.$taxonomy_id.'"]');
+                      echo do_shortcode('[aff_products taxonomy_slug="'.$taxonomy_slug.'" taxonomy_id="'.$taxonomy_id.'"]');
                     }
                     ?> 
                 </main>

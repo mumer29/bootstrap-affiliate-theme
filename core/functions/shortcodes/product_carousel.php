@@ -1,7 +1,7 @@
 <?php
-add_shortcode('affiliate_product_carousel', 'affiliate_product_carousel_shortcode');
-function affiliate_product_carousel_shortcode( $atts = [], $content = null) {
-	$affiliate_product_carousel_atts = shortcode_atts(
+add_shortcode('aff_product_carousel', 'aff_product_carousel_shortcode');
+function aff_product_carousel_shortcode( $atts = [], $content = null) {
+	$aff_product_carousel_atts = shortcode_atts(
     array(
         'image_1_id' => '',
         'image_2_id' => '',
@@ -15,16 +15,16 @@ function affiliate_product_carousel_shortcode( $atts = [], $content = null) {
         'image_10_id' => '',
     ), $atts, $tag
 );
-$image_1_id = esc_html__( $affiliate_product_carousel_atts['image_1_id'], 'affiliate_product_carousel' );
-$image_2_id = esc_html__( $affiliate_product_carousel_atts['image_2_id'], 'affiliate_product_carousel' );
-$image_3_id = esc_html__( $affiliate_product_carousel_atts['image_3_id'], 'affiliate_product_carousel' );
-$image_4_id = esc_html__( $affiliate_product_carousel_atts['image_4_id'], 'affiliate_product_carousel' );
-$image_5_id = esc_html__( $affiliate_product_carousel_atts['image_5_id'], 'affiliate_product_carousel' );
-$image_6_id = esc_html__( $affiliate_product_carousel_atts['image_6_id'], 'affiliate_product_carousel' );
-$image_7_id = esc_html__( $affiliate_product_carousel_atts['image_7_id'], 'affiliate_product_carousel' );
-$image_8_id = esc_html__( $affiliate_product_carousel_atts['image_8_id'], 'affiliate_product_carousel' );
-$image_9_id = esc_html__( $affiliate_product_carousel_atts['image_9_id'], 'affiliate_product_carousel' );
-$image_10_id = esc_html__( $affiliate_product_carousel_atts['image_10_id'], 'affiliate_product_carousel' );
+$image_1_id = esc_html__( $aff_product_carousel_atts['image_1_id'], 'aff_product_carousel' );
+$image_2_id = esc_html__( $aff_product_carousel_atts['image_2_id'], 'aff_product_carousel' );
+$image_3_id = esc_html__( $aff_product_carousel_atts['image_3_id'], 'aff_product_carousel' );
+$image_4_id = esc_html__( $aff_product_carousel_atts['image_4_id'], 'aff_product_carousel' );
+$image_5_id = esc_html__( $aff_product_carousel_atts['image_5_id'], 'aff_product_carousel' );
+$image_6_id = esc_html__( $aff_product_carousel_atts['image_6_id'], 'aff_product_carousel' );
+$image_7_id = esc_html__( $aff_product_carousel_atts['image_7_id'], 'aff_product_carousel' );
+$image_8_id = esc_html__( $aff_product_carousel_atts['image_8_id'], 'aff_product_carousel' );
+$image_9_id = esc_html__( $aff_product_carousel_atts['image_9_id'], 'aff_product_carousel' );
+$image_10_id = esc_html__( $aff_product_carousel_atts['image_10_id'], 'aff_product_carousel' );
 
 
 $uri = siteURL();

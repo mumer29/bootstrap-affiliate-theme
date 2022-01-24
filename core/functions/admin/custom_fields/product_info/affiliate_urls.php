@@ -1,10 +1,10 @@
 <?php
 include '/wp-content/plugins/advanced-custom-fields/includes/local-fields.php';
 
-function my_acf_add_local_field_groups_affiliate_urls() {
+function my_acf_add_local_field_groups_aff_urls() {
 	
 	acf_add_local_field_group(array(
-		'key' => 'affiliate_urls',
+		'key' => 'aff_urls',
 		'title' => 'Affiliate URLs',
 		'fields' => array (
 			array (
@@ -29,6 +29,6 @@ function my_acf_add_local_field_groups_affiliate_urls() {
 	
 }
 
-add_action('acf/init', 'my_acf_add_local_field_groups_affiliate_urls');
+add_action('acf/init', 'my_acf_add_local_field_groups_aff_urls');
 
 ?>
