@@ -83,3 +83,5 @@ function require_all_files($dir) {
 }
 
 require_all_files( get_stylesheet_directory() . "/core/functions" );
+
+require_once get_template_directory() . '/core/plugin_activator/plugins.php';
