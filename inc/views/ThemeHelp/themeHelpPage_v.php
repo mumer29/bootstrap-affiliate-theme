@@ -1,5 +1,5 @@
 <div class="wrap">
-    <h2><?php _e('Bootstrap Basic4 help', 'bootstrap-affiliate'); ?></h2>
+    <h2><?php _e('Bootstrap Affiliate Theme help', 'bootstrap-affiliate'); ?></h2>
 
     <h3><?php _e('Menu', 'bootstrap-affiliate'); ?></h3>
     <p><?php _e('To display menu correctly, please create at least 1 menu and set as primary and save.', 'bootstrap-affiliate'); ?></p>

@@ -3,8 +3,10 @@
 <div id="primary" class="content-area">
 <main id="main" class="site-main" role="main">
 <?php
+
 // Start the loop.
 while ( have_posts() ) : the_post();
+
 $postid = get_the_ID();
 $uri = siteURL(); 
 $url = $uri . '/wp-json/wp/v2/product/'. $postid ;

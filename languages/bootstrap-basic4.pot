@@ -208,7 +208,7 @@ msgstr ""
 
 #: inc/classes/Controller/ThemeHelp.php:46
 #: inc/views/ThemeHelp/themeHelpPage_v.php:2
-msgid "Bootstrap Basic4 help"
+msgid "Bootstrap Affiliate Theme help"
 msgstr ""
 
 #: inc/classes/Widgets/LegacySearchWidget.php:42

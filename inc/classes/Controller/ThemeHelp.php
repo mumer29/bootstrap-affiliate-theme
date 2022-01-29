@@ -43,7 +43,7 @@ if (!class_exists('\\BootstrapBasic4\\Controller\\ThemeHelp')) {
          */
         public function themeHelpMenu()
         {
-            add_theme_page(__('Bootstrap Basic4 help', 'bootstrap-affiliate'), __('Bootstrap Basic4 help', 'bootstrap-affiliate'), 'edit_posts', 'bsb4_help', [$this, 'themeHelpPage']);
+            add_theme_page(__('Bootstrap Affiliate Theme help', 'bootstrap-affiliate'), __('Bootstrap Affiliate Theme help', 'bootstrap-affiliate'), 'edit_posts', 'aff_help', [$this, 'themeHelpPage']);
         }// themeHelpMenu
 
 
