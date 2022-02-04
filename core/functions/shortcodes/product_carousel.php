@@ -31,70 +31,70 @@ $uri = siteURL();
 if($image_1_id){
 $image_1_array = file_get_contents($uri . '/wp-json/wp/v2/media/'. $image_1_id);
 $image_1_array = json_decode($image_1_array,true);
-$image_1_url = $image_1_array['media_details']['sizes']['full'];
+$image_1_url = $image_1_array['media_details']['sizes']['full']['source_url'];
   $image_1_thumb_url = $image_1_array['media_details']['sizes']['affiliate-theme-square-tiny']['source_url'];
 }
 
 if($image_2_id){
 $image_2_array = file_get_contents($uri . '/wp-json/wp/v2/media/'. $image_2_id);
 $image_2_array = json_decode($image_2_array,true);
-$image_2_url = $image_2_array['media_details']['sizes']['full'];
+$image_2_url = $image_2_array['media_details']['sizes']['full']['source_url'];
 $image_2_thumb_url = $image_2_array['media_details']['sizes']['affiliate-theme-square-tiny']['source_url'];
 }
 
 if($image_3_id){
 $image_3_array = file_get_contents($uri . '/wp-json/wp/v2/media/'. $image_3_id);
 $image_3_array = json_decode($image_3_array,true);
-$image_3_url = $image_3_array['media_details']['sizes']['full'];
+$image_3_url = $image_3_array['media_details']['sizes']['full']['source_url'];
 $image_3_thumb_url = $image_3_array['media_details']['sizes']['affiliate-theme-square-tiny']['source_url'];
 }
 
 if($image_4_id){
 $image_4_array = file_get_contents($uri . '/wp-json/wp/v2/media/'. $image_4_id);
 $image_4_array = json_decode($image_4_array,true);
-$image_4_url = $image_4_array['media_details']['sizes']['full'];
+$image_4_url = $image_4_array['media_details']['sizes']['full']['source_url'];
 $image_4_thumb_url = $image_4_array['media_details']['sizes']['affiliate-theme-square-tiny']['source_url'];
 }
 
 if($image_5_id){
 $image_5_array = file_get_contents($uri . '/wp-json/wp/v2/media/'. $image_5_id);
 $image_5_array = json_decode($image_5_array,true);
-$image_5_url = $image_5_array['media_details']['sizes']['full'];                                              
+$image_5_url = $image_5_array['media_details']['sizes']['full']['source_url'];                                              
 $image_5_thumb_url = $image_5_array['media_details']['sizes']['affiliate-theme-square-tiny']['source_url'];
 } 
 
 if($image_6_id){
 $image_6_array = file_get_contents($uri . '/wp-json/wp/v2/media/'. $image_6_id);
 $image_6_array = json_decode($image_6_array,true);
-$image_6_url = $image_6_array['media_details']['sizes']['full'];                                              
+$image_6_url = $image_6_array['media_details']['sizes']['full']['source_url'];                                              
 $image_6_thumb_url = $image_6_array['media_details']['sizes']['affiliate-theme-square-tiny']['source_url'];
 } 
 
 if($image_7_id){
 $image_7_array = file_get_contents($uri . '/wp-json/wp/v2/media/'. $image_7_id);
 $image_7_array = json_decode($image_7_array,true);
-$image_7_url = $image_7_array['media_details']['sizes']['full'];                                              
+$image_7_url = $image_7_array['media_details']['sizes']['full']['source_url'];                                              
 $image_7_thumb_url = $image_7_array['media_details']['sizes']['affiliate-theme-square-tiny']['source_url'];
 } 
 
 if($image_8_id){
 $image_8_array = file_get_contents($uri . '/wp-json/wp/v2/media/'. $image_8_id);
 $image_8_array = json_decode($image_8_array,true);
-$image_8_url = $image_8_array['media_details']['sizes']['full'];                                              
+$image_8_url = $image_8_array['media_details']['sizes']['full']['source_url'];                                              
 $image_8_thumb_url = $image_8_array['media_details']['sizes']['affiliate-theme-square-tiny']['source_url'];
 }
 
 if($image_9_id){
 $image_9_array = file_get_contents($uri . '/wp-json/wp/v2/media/'. $image_9_id);
 $image_9_array = json_decode($image_9_array,true);
-$image_9_url = $image_9_array['media_details']['sizes']['full'];                                              
+$image_9_url = $image_9_array['media_details']['sizes']['full']['source_url'];                                              
 $image_9_thumb_url = $image_9_array['media_details']['sizes']['affiliate-theme-square-tiny']['source_url'];
 }
 
 if($image_10_id){
   $image_10_array = file_get_contents($uri . '/wp-json/wp/v2/media/'. $image_10_id);
   $image_10_array = json_decode($image_10_array,true);
-  $image_10_url = $image_10_array['media_details']['sizes']['full'];                                              
+  $image_10_url = $image_10_array['media_details']['sizes']['full']['source_url'];                                              
   $image_10_thumb_url = $image_10_array['media_details']['sizes']['affiliate-theme-square-tiny']['source_url'];
   }
   
