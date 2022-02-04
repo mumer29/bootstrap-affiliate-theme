@@ -16,6 +16,8 @@ $title=$array['title']['rendered'];
 $price=$array['acf']['price'];
 $long_desciption=$array['acf']['long_description'];
 $amazon_url=$array['acf']['amazon_url'];
+$ebay_url=$array['acf']['ebay_url'];
+$walmart_url=$array['acf']['walmart_url'];
 $buy_url=$array['acf']['buy_now_url'];
 $brand_id= $array['brand']['0'];
 $brand_name = do_shortcode('[aff_brand_name brand_id="'.$brand_id.'"]');
@@ -51,9 +53,21 @@ $related_products = do_shortcode('[aff_products]');
  $content .= '</div>';
  $content .= '<div class="col-12">';
  $content .= '<div class="row m-0">';
+ if ($amazon_url){
  $content .= '<div class="col-12 pb-3">';
  $content .= '<a class="btn btn-warning btn-block" href="'.$amazon_url.'" role="button" target="_blank">View on Amazon</a>';
  $content .= '</div>';
+ }
+ if ($ebay_url){
+  $content .= '<div class="col-12 pb-3">';
+  $content .= '<a class="btn btn-secondary btn-block" href="'.$ebay_url.'" role="button" target="_blank">View on Ebay</a>';
+  $content .= '</div>';
+  }
+  if ($walmart_url){
+    $content .= '<div class="col-12 pb-3">';
+    $content .= '<a class="btn btn-info btn-block" href="'.$walmart_url.'" role="button" target="_blank">View on Walmart</a>';
+    $content .= '</div>';
+    }
  if ($buy_url){
  $content .= '<div class="col-12 pt-3 pt-md-0 pb-3">';
  $content .= '<a class="btn btn-danger btn-block" href="'.$buy_url.'" role="button" target="_blank">Buy Now</a>';

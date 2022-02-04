@@ -18,7 +18,19 @@ function my_acf_add_local_field_groups_aff_urls() {
 				'label' => 'Amazon URL',
 				'name' => 'amazon_url',
 				'type' => 'url',
-			)
+			),
+			array (
+				'key' => 'ebay_url',
+				'label' => 'Ebay URL',
+				'name' => 'ebay_url',
+				'type' => 'url',
+			),
+			array (
+				'key' => 'walmart_url',
+				'label' => 'Walmart URL',
+				'name' => 'walmart_url',
+				'type' => 'url',
+			),
 		),
 		'location' => array (
 			array (
