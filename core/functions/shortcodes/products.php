@@ -24,7 +24,7 @@ function aff_products_shortcode( $atts = [], $content = null, $tag = '' ) {
 	$content = '  <div class="row m-0">';
 	foreach($array as $item) {
 		$learn_url=$item['link'];
-		$buy_url=$item['acf']['amazon_url'];
+		$buy_url=$item['acf']['buy_now_url'];
 		$title=$item['title']['rendered'];
 		$price=$item['acf']['price'];
 		// $price= do_shortcode( '[wbcr_snippet id="187" url="'.$url.'"]' );
@@ -41,7 +41,9 @@ function aff_products_shortcode( $atts = [], $content = null, $tag = '' ) {
 		$content .= '    <p class="card-text"><small class="text-muted">by '.do_shortcode('[aff_manufacturer_name manufacturer_id="'.$manufacturer_id.'"]').'</small></p>';
 		$content .='<p class="font-weight-bold">'.$price .'</p>';
 		$content .= '<a class="btn btn-warning btn-block" href="'.$learn_url.'" role="button">Learn More</a>';
+		if ($buy_url){
 		$content .= '<a class="btn btn-danger btn-block" href="'.$buy_url.'" role="button" target="_blank">Buy Now</a>';
+		}
 		$content .= '</div>';
 		$content .= '</div>';
 		$content .= '</div>';

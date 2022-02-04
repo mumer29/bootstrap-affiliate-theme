@@ -16,6 +16,7 @@ $title=$array['title']['rendered'];
 $price=$array['acf']['price'];
 $long_desciption=$array['acf']['long_description'];
 $amazon_url=$array['acf']['amazon_url'];
+$buy_url=$array['acf']['buy_now_url'];
 $brand_id= $array['brand']['0'];
 $brand_name = do_shortcode('[aff_brand_name brand_id="'.$brand_id.'"]');
 $brand_link = do_shortcode('[aff_brand_link brand_id="'.$brand_id.'"]');
@@ -35,37 +36,41 @@ $product_carousel = do_shortcode('[aff_product_carousel image_1_id="'.$image_1_i
 
 $related_products = do_shortcode('[aff_products]');
 
- $content = '<div class="row m-0">
- <div class="col-12 col-md-4">
-   <h1 class="text-center text-md-left d-block d-md-none">' .$title . '</h1>' . 
-   $product_carousel . 
-'</div>
- <div class="col-12 col-md-8 p-2">
- <a href="'.$brand_link.'"><p class="">Brand: ' .$brand_name . '</p></a>
- <h1 class="text-md-center text-md-left d-none d-md-block">' .$title . '</h1>
- <div class="row m-0">
-   <div class="col-12">
-     <p class="h3 text-center">' .$price . '</p>' . $long_desciption . 
-  '</div>
-   <div class="col-12">
-     <div class="row m-0">
-       <div class="col-12 pb-3">
-         <a class="btn btn-warning btn-block" href="'.$amazon_url.'" role="button" target="_blank">View on Amazon</a>
-       </div>
-       <div class="col-12 pt-3 pt-md-0 pb-3">
-         <a class="btn btn-danger btn-block" href="'.$amazon_url.'" role="button" target="_blank">Buy Now</a>
-       </div>
-     </div>
-   </div>
- </div>
-</div>
-</div>
-<div class="row m-0">
- <div class="col-12">
-   <h3 class="m-0 pt-3">Related Products</h3><br>' . $related_products . 
- '</div>
-</div>
-';
+ $content = '<div class="row m-0">';
+ $content .= '<div class="col-12 col-md-4">';
+ $content .= '<h1 class="text-center text-md-left d-block d-md-none">' .$title . '</h1>'; 
+ $content .= $product_carousel; 
+ $content .= '</div>';
+ $content .= '<div class="col-12 col-md-8 p-2">';
+ $content .= '<a href="'.$brand_link.'"><p class="">Brand: ' .$brand_name . '</p></a>';
+ $content .= '<h1 class="text-md-center text-md-left d-none d-md-block">' .$title . '</h1>';
+ $content .= '<div class="row m-0">';
+ $content .= '<div class="col-12">';
+ $content .= '<p class="h3 text-center">' .$price . '</p>';
+ $content .= $long_desciption;
+ $content .= '</div>';
+ $content .= '<div class="col-12">';
+ $content .= '<div class="row m-0">';
+ $content .= '<div class="col-12 pb-3">';
+ $content .= '<a class="btn btn-warning btn-block" href="'.$amazon_url.'" role="button" target="_blank">View on Amazon</a>';
+ $content .= '</div>';
+ if ($buy_url){
+ $content .= '<div class="col-12 pt-3 pt-md-0 pb-3">';
+ $content .= '<a class="btn btn-danger btn-block" href="'.$buy_url.'" role="button" target="_blank">Buy Now</a>';
+ $content .= '</div>';
+ }
+ $content .= '</div>';
+ $content .= '</div>';
+ $content .= '</div>';
+ $content .= '</div>';
+ $content .= '</div>';
+ $content .= '<div class="row m-0">';
+ $content .= '<div class="col-12">';
+ $content .= '<h3 class="m-0 pt-3">Related Products</h3>';
+ $content .= '<br>';
+ $content .= $related_products;
+ $content .= '</div>';
+ $content .= '</div>';
 
  echo $content;
  // If comments are open or we have at least one comment, load up the comment template.
