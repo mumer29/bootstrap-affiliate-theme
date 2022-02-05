@@ -23,9 +23,57 @@ $ebay_url=$array['acf']['ebay_url'] . '#LeftSummaryPanel';
 $walmart_url=$array['acf']['walmart_url'];
 $buy_url=$array['acf']['buy_now_url'];
 $video_1_url=$array['acf']['video_1_url'];
+if (strpos($video_1_url,'youtube.com') !== false) {
+  if (strpos($video_1_url,'watch') !== false) {
+    $video_1_url_components = parse_url($video_1_url);
+    parse_str($video_1_url_components['query'], $video_1_params);
+    $video_1_url = 'https://www.youtube.com/embed/' . $video_1_params['v'];
+  }
+}
+if (strpos($video_1_url,'https://youtu.be') !== false) {
+  $video_1_url_components = parse_url($video_1_url);
+  $video_1_url_components_parts= explode('/', $video_1_url_components['path']);
+  $video_1_url = 'https://www.youtube.com/embed/' . $video_1_url_components_parts[1];
+}
 $video_2_url=$array['acf']['video_2_url'];
+if (strpos($video_2_url,'youtube.com') !== false) {
+  if (strpos($video_2_url,'watch') !== false) {
+    $video_2_url_components = parse_url($video_2_url);
+    parse_str($video_2_url_components['query'], $video_2_params);
+    $video_2_url = 'https://www.youtube.com/embed/' . $video_2_params['v'];
+  }
+}
+if (strpos($video_2_url,'https://youtu.be') !== false) {
+  $video_2_url_components = parse_url($video_2_url);
+  $video_2_url_components_parts= explode('/', $video_2_url_components['path']);
+  $video_2_url = 'https://www.youtube.com/embed/' . $video_2_url_components_parts[1];
+}
 $video_3_url=$array['acf']['video_3_url'];
+if (strpos($video_3_url,'youtube.com') !== false) {
+  if (strpos($video_3_url,'watch') !== false) {
+    $video_3_url_components = parse_url($video_3_url);
+    parse_str($video_3_url_components['query'], $video_3_params);
+    $video_3_url = 'https://www.youtube.com/embed/' . $video_3_params['v'];
+  }
+}
+if (strpos($video_3_url,'https://youtu.be') !== false) {
+  $video_3_url_components = parse_url($video_3_url);
+  $video_3_url_components_parts= explode('/', $video_3_url_components['path']);
+  $video_3_url = 'https://www.youtube.com/embed/' . $video_3_url_components_parts[1];
+}
 $video_4_url=$array['acf']['video_4_url'];
+if (strpos($video_4_url,'youtube.com') !== false) {
+  if (strpos($video_4_url,'watch') !== false) {
+    $video_4_url_components = parse_url($video_4_url);
+    parse_str($video_4_url_components['query'], $video_4_params);
+    $video_4_url = 'https://www.youtube.com/embed/' . $video_4_params['v'];
+  }
+}
+if (strpos($video_4_url,'https://youtu.be') !== false) {
+  $video_4_url_components = parse_url($video_4_url);
+  $video_4_url_components_parts= explode('/', $video_4_url_components['path']);
+  $video_4_url = 'https://www.youtube.com/embed/' . $video_4_url_components_parts[1];
+}
 $brand_id= $array['brand']['0'];
 $brand_name = do_shortcode('[aff_brand_name brand_id="'.$brand_id.'"]');
 $brand_link = do_shortcode('[aff_brand_link brand_id="'.$brand_id.'"]');
@@ -50,27 +98,27 @@ $related_products = do_shortcode('[aff_products]');
  $content .= '<h1 class="text-center text-md-left d-block d-md-none">' .$title . '</h1>'; 
  $content .= $product_carousel; 
  if ($video_1_url || $video_2_url || $video_3_url || $video_4_url){
-  $content .= '<div class="d-none d-md-block">';
+  $content .= '<div class="row d-none d-md-block m-0">';
   $content .= '<h3 class="pt-4">Product Videos</h3>';
  }
  if ($video_1_url){
   $content .= '<div class="embed-responsive embed-responsive-16by9">';
-  $content .= '<iframe class="embed-responsive-item" src="'.$video_1_url.'?rel=0" allowfullscreen></iframe>';
+  $content .= '<iframe class="pt-2 embed-responsive-item" src="'.$video_1_url.'?rel=0" allowfullscreen></iframe>';
   $content .= '</div>';
  }
  if ($video_2_url){
-  $content .= '<div class="pt-4 embed-responsive embed-responsive-16by9">';
-  $content .= '<iframe class="embed-responsive-item" src="'.$video_2_url.'?rel=0" allowfullscreen></iframe>';
+  $content .= '<div class="embed-responsive embed-responsive-16by9">';
+  $content .= '<iframe class="pt-4 embed-responsive-item" src="'.$video_2_url.'?rel=0" allowfullscreen></iframe>';
   $content .= '</div>';
  }
  if ($video_3_url){
-  $content .= '<div class="pt-4 embed-responsive embed-responsive-16by9">';
-  $content .= '<iframe class="embed-responsive-item" src="'.$video_3_url.'?rel=0" allowfullscreen></iframe>';
+  $content .= '<div class="embed-responsive embed-responsive-16by9">';
+  $content .= '<iframe class="pt-4 embed-responsive-item" src="'.$video_3_url.'?rel=0" allowfullscreen></iframe>';
   $content .= '</div>';
  }
  if ($video_4_url){
   $content .= '<div class="pt-4 embed-responsive embed-responsive-16by9">';
-  $content .= '<iframe class="embed-responsive-item" src="'.$video_4_url.'?rel=0" allowfullscreen></iframe>';
+  $content .= '<iframe class="pt-4 embed-responsive-item" src="'.$video_4_url.'?rel=0" allowfullscreen></iframe>';
   $content .= '</div>';
  }
  if ($video_1_url || $video_2_url || $video_3_url || $video_4_url){
