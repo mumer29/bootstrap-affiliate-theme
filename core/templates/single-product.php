@@ -22,6 +22,10 @@ $amazon_url=$array['acf']['amazon_url'];
 $ebay_url=$array['acf']['ebay_url'] . '#LeftSummaryPanel';
 $walmart_url=$array['acf']['walmart_url'];
 $buy_url=$array['acf']['buy_now_url'];
+$video_1_url=$array['acf']['video_1_url'];
+$video_2_url=$array['acf']['video_2_url'];
+$video_3_url=$array['acf']['video_3_url'];
+$video_4_url=$array['acf']['video_4_url'];
 $brand_id= $array['brand']['0'];
 $brand_name = do_shortcode('[aff_brand_name brand_id="'.$brand_id.'"]');
 $brand_link = do_shortcode('[aff_brand_link brand_id="'.$brand_id.'"]');
@@ -45,6 +49,33 @@ $related_products = do_shortcode('[aff_products]');
  $content .= '<div class="col-12 col-md-4">';
  $content .= '<h1 class="text-center text-md-left d-block d-md-none">' .$title . '</h1>'; 
  $content .= $product_carousel; 
+ if ($video_1_url || $video_2_url || $video_3_url || $video_4_url){
+  $content .= '<div class="d-none d-md-block">';
+  $content .= '<h3 class="pt-4">Product Videos</h3>';
+ }
+ if ($video_1_url){
+  $content .= '<div class="embed-responsive embed-responsive-16by9">';
+  $content .= '<iframe class="embed-responsive-item" src="'.$video_1_url.'?rel=0" allowfullscreen></iframe>';
+  $content .= '</div>';
+ }
+ if ($video_2_url){
+  $content .= '<div class="pt-4 embed-responsive embed-responsive-16by9">';
+  $content .= '<iframe class="embed-responsive-item" src="'.$video_2_url.'?rel=0" allowfullscreen></iframe>';
+  $content .= '</div>';
+ }
+ if ($video_3_url){
+  $content .= '<div class="pt-4 embed-responsive embed-responsive-16by9">';
+  $content .= '<iframe class="embed-responsive-item" src="'.$video_3_url.'?rel=0" allowfullscreen></iframe>';
+  $content .= '</div>';
+ }
+ if ($video_4_url){
+  $content .= '<div class="pt-4 embed-responsive embed-responsive-16by9">';
+  $content .= '<iframe class="embed-responsive-item" src="'.$video_4_url.'?rel=0" allowfullscreen></iframe>';
+  $content .= '</div>';
+ }
+ if ($video_1_url || $video_2_url || $video_3_url || $video_4_url){
+  $content .= '</div>';
+ }
  $content .= '</div>';
  $content .= '<div class="col-12 col-md-8 p-2">';
  $content .= '<a href="'.$brand_link.'"><p class="">Brand: ' .$brand_name . '</p></a>';
@@ -54,19 +85,11 @@ $related_products = do_shortcode('[aff_products]');
  $content .= '<p class="h3 text-center">' .$price . '</p>';
  $content .= $short_desciption;
  $content .= $long_desciption;
- if ($pros_desciption){
- $content .= '<h3>What Users Like</h3>';
- $content .= $pros_desciption;
- }
- if ($cons_desciption){
- $content .= '<h3>Opportunities for Growth</h3>';
- $content .= $cons_desciption;
- }
  $content .= '</div>';
  $content .= '<div class="col-12">';
  $content .= '<div class="row m-0">';
  if ($amazon_url){
- $content .= '<div class="col-12 pb-3">';
+ $content .= '<div class="pt-3 col-12 pb-3">';
  $content .= '<a class="btn btn-warning btn-block" href="'.$amazon_url.'" role="button" target="_blank">View on Amazon</a>';
  $content .= '</div>';
  }
@@ -81,10 +104,47 @@ $related_products = do_shortcode('[aff_products]');
     $content .= '</div>';
     }
  if ($buy_url){
- $content .= '<div class="col-12 pt-3 pt-md-0 pb-3">';
+ $content .= '<div class="col-12 pb-3">';
  $content .= '<a class="btn btn-danger btn-block" href="'.$buy_url.'" role="button" target="_blank">Buy Now</a>';
  $content .= '</div>';
  }
+
+ if ($video_1_url || $video_2_url || $video_3_url || $video_4_url){
+  $content .= '<div class="col-12 d-block d-md-none">';
+  $content .= '<h3 class="pt-4">Product Videos</h3>';
+ }
+ if ($video_1_url){
+  $content .= '<div class="embed-responsive embed-responsive-16by9">';
+  $content .= '<iframe class="embed-responsive-item" src="'.$video_1_url.'?rel=0" allowfullscreen></iframe>';
+  $content .= '</div>';
+ }
+ if ($video_2_url){
+  $content .= '<div class="pt-4 embed-responsive embed-responsive-16by9">';
+  $content .= '<iframe class="embed-responsive-item" src="'.$video_2_url.'?rel=0" allowfullscreen></iframe>';
+  $content .= '</div>';
+ }
+ if ($video_3_url){
+  $content .= '<div class="pt-4 embed-responsive embed-responsive-16by9">';
+  $content .= '<iframe class="embed-responsive-item" src="'.$video_3_url.'?rel=0" allowfullscreen></iframe>';
+  $content .= '</div>';
+ }
+ if ($video_4_url){
+  $content .= '<div class="pt-4 embed-responsive embed-responsive-16by9">';
+  $content .= '<iframe class="embed-responsive-item" src="'.$video_4_url.'?rel=0" allowfullscreen></iframe>';
+  $content .= '</div>';
+ }
+ if ($video_1_url || $video_2_url || $video_3_url || $video_4_url){
+  $content .= '</div>';
+ }
+ if ($pros_desciption){
+ $content .= '<h3>What Users Like</h3>';
+ $content .= $pros_desciption;
+ }
+ if ($cons_desciption){
+ $content .= '<h3>Opportunities for Growth</h3>';
+ $content .= $cons_desciption;
+ }
+
  $content .= '</div>';
  $content .= '</div>';
  $content .= '</div>';
