@@ -5,7 +5,7 @@ function my_acf_add_local_field_groups_aff_videos() {
 	
 	acf_add_local_field_group(array(
 		'key' => 'videos',
-		'title' => 'Videoa',
+		'title' => 'Videos',
 		'fields' => array (
 			array (
 				'key' => 'video_1_url',
