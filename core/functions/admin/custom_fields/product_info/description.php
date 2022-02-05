@@ -18,7 +18,19 @@ function my_acf_add_local_field_groups_description() {
 				'label' => 'Long Description',
 				'name' => 'long_description',
 				'type' => 'wysiwyg',
-			)
+			),
+			array (
+				'key' => 'pros_description',
+				'label' => 'Pros Description',
+				'name' => 'pros_description',
+				'type' => 'wysiwyg',
+			),
+			array (
+				'key' => 'cons_description',
+				'label' => 'Cons Description',
+				'name' => 'cons_description',
+				'type' => 'wysiwyg',
+			),
 		),
 		'location' => array (
 			array (

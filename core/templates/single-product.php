@@ -14,7 +14,10 @@ $json = file_get_contents($url);
 $array = json_decode($json,true);
 $title=$array['title']['rendered'];
 $price=$array['acf']['price'];
+$short_desciption=$array['acf']['short_description'];
 $long_desciption=$array['acf']['long_description'];
+$pros_desciption=$array['acf']['pros_description'];
+$cons_desciption=$array['acf']['cons_description'];
 $amazon_url=$array['acf']['amazon_url'];
 $ebay_url=$array['acf']['ebay_url'] . '#LeftSummaryPanel';
 $walmart_url=$array['acf']['walmart_url'];
@@ -49,7 +52,16 @@ $related_products = do_shortcode('[aff_products]');
  $content .= '<div class="row m-0">';
  $content .= '<div class="col-12">';
  $content .= '<p class="h3 text-center">' .$price . '</p>';
+ $content .= $short_desciption;
  $content .= $long_desciption;
+ if ($pros_desciption){
+ $content .= '<h3>What Users Like</h3>';
+ $content .= $pros_desciption;
+ }
+ if ($cons_desciption){
+ $content .= '<h3>Opportunities for Growth</h3>';
+ $content .= $cons_desciption;
+ }
  $content .= '</div>';
  $content .= '<div class="col-12">';
  $content .= '<div class="row m-0">';
