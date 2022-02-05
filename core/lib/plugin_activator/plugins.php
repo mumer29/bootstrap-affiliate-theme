@@ -80,6 +80,11 @@ function bootstrap_affiliate_register_required_plugins() {
 			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
+		array(
+			'name'      => 'Yoast Duplicate Post',
+			'slug'      => 'duplicate-post',
+			'required'  => false,
+		),
 	);
 
 	/*
