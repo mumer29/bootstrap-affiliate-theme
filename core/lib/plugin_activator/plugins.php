@@ -85,6 +85,11 @@ function bootstrap_affiliate_register_required_plugins() {
 			'slug'      => 'duplicate-post',
 			'required'  => false,
 		),
+		array(
+			'name'      => 'MailChimp Forms by MailMunch',
+			'slug'      => 'mailchimp-forms-by-mailmunch',
+			'required'  => false,
+		),
 	);
 
 	/*
