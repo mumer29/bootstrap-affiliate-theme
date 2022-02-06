@@ -19,7 +19,10 @@ $long_desciption=$array['acf']['long_description'];
 $pros_desciption=$array['acf']['pros_description'];
 $cons_desciption=$array['acf']['cons_description'];
 $amazon_url=$array['acf']['amazon_url'];
+$ebay_url=$array['acf']['ebay_url'];
+if ($ebay_url){
 $ebay_url=$array['acf']['ebay_url'] . '#LeftSummaryPanel';
+}
 $walmart_url=$array['acf']['walmart_url'];
 $buy_url=$array['acf']['buy_now_url'];
 $video_1_url=$array['acf']['video_1_url'];
