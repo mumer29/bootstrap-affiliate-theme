@@ -135,7 +135,7 @@ $related_products = do_shortcode('[aff_products]');
  $content .= '<div class="col-12">';
  $content .= '<p class="h3 text-center">' .$price . '</p>';
  $content .= $short_desciption;
- if ($pros_desciption){
+ if ($long_desciption){
  $content .= '<h3>Product Details</h3>';
  $content .= $long_desciption;
  }
