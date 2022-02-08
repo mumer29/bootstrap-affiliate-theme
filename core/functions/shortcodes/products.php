@@ -32,6 +32,7 @@ function aff_products_shortcode( $atts = [], $content = null, $tag = '' ) {
 		$walmart_url=$item['acf']['walmart_url'];
 		$title=$item['title']['rendered'];
 		$modal_id = str_replace(" ", "-", $title);
+		$modal_id = RemoveSpecialChar($modal_id);
 		$price=$item['acf']['price'];
 		// $price= do_shortcode( '[wbcr_snippet id="187" url="'.$url.'"]' );
 		$image_1_id = $item['acf']['image_1'];
