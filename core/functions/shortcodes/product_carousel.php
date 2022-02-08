@@ -29,72 +29,72 @@ $image_10_id = esc_html__( $aff_product_carousel_atts['image_10_id'], 'aff_produ
 
 $uri = siteURL();
 if($image_1_id){
-  $img_1_full = wp_get_attachment_image_src($image_1_id, 'full');
+  $img_1_main = wp_get_attachment_image_src($image_1_id, 'medium');
   $img_1_thumb = wp_get_attachment_image_src($image_1_id, 'affiliate-theme-square-tiny');
-  $image_1_url = $img_1_full[0];
+  $image_1_url = $img_1_main[0];
   $image_1_thumb_url = $img_1_thumb[0];
 }
 
 if($image_2_id){
-  $img_2_full = wp_get_attachment_image_src($image_2_id, 'full');
+  $img_2_main = wp_get_attachment_image_src($image_2_id, 'medium');
   $img_2_thumb = wp_get_attachment_image_src($image_2_id, 'affiliate-theme-square-tiny');
-  $image_2_url = $img_2_full[0];
+  $image_2_url = $img_2_main[0];
   $image_2_thumb_url = $img_2_thumb[0];
 }
 
 if($image_3_id){
-  $img_3_full = wp_get_attachment_image_src($image_3_id, 'full');
+  $img_3_main = wp_get_attachment_image_src($image_3_id, 'medium');
   $img_3_thumb = wp_get_attachment_image_src($image_3_id, 'affiliate-theme-square-tiny');
-  $image_3_url = $img_3_full[0];
+  $image_3_url = $img_3_main[0];
   $image_3_thumb_url = $img_3_thumb[0];
 }
 
 if($image_4_id){
-  $img_4_full = wp_get_attachment_image_src($image_4_id, 'full');
+  $img_4_main = wp_get_attachment_image_src($image_4_id, 'medium');
   $img_4_thumb = wp_get_attachment_image_src($image_4_id, 'affiliate-theme-square-tiny');
-  $image_4_url = $img_4_full[0];
+  $image_4_url = $img_4_main[0];
   $image_4_thumb_url = $img_4_thumb[0];
 }
 
 if($image_5_id){
-  $img_5_full = wp_get_attachment_image_src($image_5_id, 'full');
+  $img_5_main = wp_get_attachment_image_src($image_5_id, 'medium');
   $img_5_thumb = wp_get_attachment_image_src($image_5_id, 'affiliate-theme-square-tiny');
-  $image_5_url = $img_5_full[0];
+  $image_5_url = $img_5_main[0];
   $image_5_thumb_url = $img_5_thumb[0];                                             
 } 
 
 if($image_6_id){
-  $img_6_full = wp_get_attachment_image_src($image_6_id, 'full');
+  $img_6_main = wp_get_attachment_image_src($image_6_id, 'medium');
   $img_6_thumb = wp_get_attachment_image_src($image_6_id, 'affiliate-theme-square-tiny');
-  $image_6_url = $img_6_full[0];
+  $image_6_url = $img_6_main[0];
   $image_6_thumb_url = $img_6_thumb[0];                                            
 } 
 
 if($image_7_id){
-  $img_7_full = wp_get_attachment_image_src($image_7_id, 'full');
+  $img_7_main = wp_get_attachment_image_src($image_7_id, 'medium');
   $img_7_thumb = wp_get_attachment_image_src($image_7_id, 'affiliate-theme-square-tiny');
-  $image_7_url = $img_7_full[0];
+  $image_7_url = $img_7_main[0];
   $image_7_thumb_url = $img_7_thumb[0];                                             
 } 
 
 if($image_8_id){
-  $img_8_full = wp_get_attachment_image_src($image_8_id, 'full');
+  $img_8_main = wp_get_attachment_image_src($image_8_id, 'medium');
   $img_8_thumb = wp_get_attachment_image_src($image_8_id, 'affiliate-theme-square-tiny');
-  $image_8_url = $img_8_full[0];
+  $image_8_url = $img_8_main[0];
   $image_8_thumb_url = $img_8_thumb[0];                                           
 }
 
 if($image_9_id){
-  $img_9_full = wp_get_attachment_image_src($image_9_id, 'full');
+  $img_9_main = wp_get_attachment_image_src($image_9_id, 'medium');
   $img_9_thumb = wp_get_attachment_image_src($image_9_id, 'affiliate-theme-square-tiny');
-  $image_9_url = $img_9_full[0];
+  $image_9_url = $img_9_main[0];
   $image_9_thumb_url = $img_9_thumb[0];                                             
 }
 
 if($image_10_id){
-  $img_10_full = wp_get_attachment_image_src($image_10_id, 'full');
+  $img_10_main = wp_get_attachment_image_src($image_10_id, 'medium');
   $img_10_thumb = wp_get_attachment_image_src($image_10_id, 'affiliate-theme-square-tiny');
-  $image_10_url = $img_10_full[0];
+  $image_10_url = $img_10_main[0];
   $image_10_thumb_url = $img_10_thumb[0];                                            
   }
   
