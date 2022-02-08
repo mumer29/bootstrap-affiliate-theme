@@ -11,20 +11,20 @@ $postid = get_the_ID();
 $uri = siteURL(); 
 $url = $uri . '/wp-json/wp/v2/product/'. $postid ;
 $json = file_get_contents($url);
-$array = json_decode($json,true);
-$title=$array['title']['rendered'];
-$price=$array['acf']['price'];
-$short_desciption=$array['acf']['short_description'];
-$long_desciption=$array['acf']['long_description'];
-$pros_desciption=$array['acf']['pros_description'];
-$cons_desciption=$array['acf']['cons_description'];
-$amazon_url=$array['acf']['amazon_url'];
-$ebay_url=$array['acf']['ebay_url'];
+$item = json_decode($json,true);
+$title=$item['title']['rendered'];
+$price=$item['acf']['price'];
+$short_desciption=$item['acf']['short_description'];
+$long_desciption=$item['acf']['long_description'];
+$pros_desciption=$item['acf']['pros_description'];
+$cons_desciption=$item['acf']['cons_description'];
+$amazon_url=$item['acf']['amazon_url'];
+$ebay_url=$item['acf']['ebay_url'];
 if ($ebay_url){
-$ebay_url=$array['acf']['ebay_url'] . '#LeftSummaryPanel';
+$ebay_url=$item['acf']['ebay_url'] . '#LeftSummaryPanel';
 }
-$walmart_url=$array['acf']['walmart_url'];
-$video_1_url=$array['acf']['video_1_url'];
+$walmart_url=$item['acf']['walmart_url'];
+$video_1_url=$item['acf']['video_1_url'];
 if (strpos($video_1_url,'youtube.com') !== false) {
   if (strpos($video_1_url,'watch') !== false) {
     $video_1_url_components = parse_url($video_1_url);
@@ -37,7 +37,7 @@ if (strpos($video_1_url,'https://youtu.be') !== false) {
   $video_1_url_components_parts= explode('/', $video_1_url_components['path']);
   $video_1_url = 'https://www.youtube.com/embed/' . $video_1_url_components_parts[1];
 }
-$video_2_url=$array['acf']['video_2_url'];
+$video_2_url=$item['acf']['video_2_url'];
 if (strpos($video_2_url,'youtube.com') !== false) {
   if (strpos($video_2_url,'watch') !== false) {
     $video_2_url_components = parse_url($video_2_url);
@@ -50,7 +50,7 @@ if (strpos($video_2_url,'https://youtu.be') !== false) {
   $video_2_url_components_parts= explode('/', $video_2_url_components['path']);
   $video_2_url = 'https://www.youtube.com/embed/' . $video_2_url_components_parts[1];
 }
-$video_3_url=$array['acf']['video_3_url'];
+$video_3_url=$item['acf']['video_3_url'];
 if (strpos($video_3_url,'youtube.com') !== false) {
   if (strpos($video_3_url,'watch') !== false) {
     $video_3_url_components = parse_url($video_3_url);
@@ -63,7 +63,7 @@ if (strpos($video_3_url,'https://youtu.be') !== false) {
   $video_3_url_components_parts= explode('/', $video_3_url_components['path']);
   $video_3_url = 'https://www.youtube.com/embed/' . $video_3_url_components_parts[1];
 }
-$video_4_url=$array['acf']['video_4_url'];
+$video_4_url=$item['acf']['video_4_url'];
 if (strpos($video_4_url,'youtube.com') !== false) {
   if (strpos($video_4_url,'watch') !== false) {
     $video_4_url_components = parse_url($video_4_url);
@@ -76,20 +76,20 @@ if (strpos($video_4_url,'https://youtu.be') !== false) {
   $video_4_url_components_parts= explode('/', $video_4_url_components['path']);
   $video_4_url = 'https://www.youtube.com/embed/' . $video_4_url_components_parts[1];
 }
-$brand_id= $array['brand']['0'];
+$brand_id= $item['brand']['0'];
 $brand_name = do_shortcode('[aff_brand_name brand_id="'.$brand_id.'"]');
 $brand_link = do_shortcode('[aff_brand_link brand_id="'.$brand_id.'"]');
 
-$image_1_id = $array['acf']['image_1'];
-$image_2_id = $array['acf']['image_2'];
-$image_3_id = $array['acf']['image_3'];
-$image_4_id = $array['acf']['image_4'];
-$image_5_id = $array['acf']['image_5'];
-$image_6_id = $array['acf']['image_6'];
-$image_7_id = $array['acf']['image_7'];
-$image_8_id = $array['acf']['image_8'];
-$image_9_id = $array['acf']['image_9'];
-$image_10_id = $array['acf']['image_10'];
+$image_1_id = $item['acf']['image_1'];
+$image_2_id = $item['acf']['image_2'];
+$image_3_id = $item['acf']['image_3'];
+$image_4_id = $item['acf']['image_4'];
+$image_5_id = $item['acf']['image_5'];
+$image_6_id = $item['acf']['image_6'];
+$image_7_id = $item['acf']['image_7'];
+$image_8_id = $item['acf']['image_8'];
+$image_9_id = $item['acf']['image_9'];
+$image_10_id = $item['acf']['image_10'];
  
 $product_carousel = do_shortcode('[aff_product_carousel image_1_id="'.$image_1_id.'" image_2_id="'.$image_2_id.'" image_3_id="'.$image_3_id.'" image_4_id="'.$image_4_id.'" image_5_id="'.$image_5_id.'" image_6_id="'.$image_6_id.'" image_7_id="'.$image_7_id.'" image_8_id="'.$image_8_id.'" image_9_id="'.$image_9_id.'" image_10_id="'.$image_10_id.'"]');
 
