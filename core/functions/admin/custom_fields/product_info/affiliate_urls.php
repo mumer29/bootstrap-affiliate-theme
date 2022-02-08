@@ -8,12 +8,6 @@ function my_acf_add_local_field_groups_aff_urls() {
 		'title' => 'Affiliate URLs',
 		'fields' => array (
 			array (
-				'key' => 'buy_now_url',
-				'label' => 'Buy Now URL',
-				'name' => 'buy_now_url',
-				'type' => 'url',
-			),
-			array (
 				'key' => 'amazon_url',
 				'label' => 'Amazon URL',
 				'name' => 'amazon_url',

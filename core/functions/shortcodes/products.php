@@ -24,8 +24,14 @@ function aff_products_shortcode( $atts = [], $content = null, $tag = '' ) {
 	$content = '  <div class="row m-0">';
 	foreach($array as $item) {
 		$learn_url=$item['link'];
-		$buy_url=$item['acf']['buy_now_url'];
+		$amazon_url=$item['acf']['amazon_url'];
+		$ebay_url=$item['acf']['ebay_url'];
+		if ($ebay_url){
+			$ebay_url=$item['acf']['ebay_url'] . '#LeftSummaryPanel';
+			}
+		$walmart_url=$item['acf']['walmart_url'];
 		$title=$item['title']['rendered'];
+		$modal_id = str_replace(" ", "-", $title);
 		$price=$item['acf']['price'];
 		// $price= do_shortcode( '[wbcr_snippet id="187" url="'.$url.'"]' );
 		$image_1_id = $item['acf']['image_1'];
@@ -41,9 +47,31 @@ function aff_products_shortcode( $atts = [], $content = null, $tag = '' ) {
 		$content .= '    <p class="card-text"><small class="text-muted">by '.do_shortcode('[aff_manufacturer_name manufacturer_id="'.$manufacturer_id.'"]').'</small></p>';
 		$content .='<p class="font-weight-bold">'.$price .'</p>';
 		$content .= '<a class="btn btn-warning btn-block" href="'.$learn_url.'" role="button">Learn More</a>';
-		if ($buy_url){
-		$content .= '<a class="btn btn-danger btn-block" href="'.$buy_url.'" role="button" target="_blank">Buy Now</a>';
-		}
+		$content .= '<a class="btn btn-danger btn-block" href="javascriptVoid(0);" role="button"  data-toggle="modal" data-target="#'.$modal_id.'">Buy Now</a>';
+		$content .= '</div>';
+		$content .= '</div>';
+		$content .= '</div>';
+
+		$content .= '<div class="modal fade" id="'.$modal_id.'" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">';
+		$content .= '<div class="modal-dialog" role="document">';
+		$content .= '<div class="modal-content">';
+		$content .= '<div class="modal-header">';
+        $content .= '<h5 class="modal-title" id="">'.$title.' - '.$price.'</h5>';
+        $content .= '<button type="button" class="close" data-dismiss="modal" aria-label="Close">';
+		$content .= '<span aria-hidden="true">&times;</span>';
+        $content .= '</button>';
+		$content .= '</div>';
+		$content .= '<div class="modal-body">';
+        if ($amazon_url){
+			$content .= '<a class="btn btn-warning btn-block" href="'.$amazon_url.'" role="button" target="_blank">View on Amazon</a>';
+			}
+			if ($ebay_url){
+			 $content .= '<a class="btn btn-secondary btn-block" href="'.$ebay_url.'" role="button" target="_blank">View on Ebay</a>';
+			 }
+			 if ($walmart_url){
+			   $content .= '<a class="btn btn-info btn-block" href="'.$walmart_url.'" role="button" target="_blank">View on Walmart</a>';
+			   }
+		$content .= '</div>';
 		$content .= '</div>';
 		$content .= '</div>';
 		$content .= '</div>';

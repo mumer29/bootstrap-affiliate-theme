@@ -24,7 +24,6 @@ if ($ebay_url){
 $ebay_url=$array['acf']['ebay_url'] . '#LeftSummaryPanel';
 }
 $walmart_url=$array['acf']['walmart_url'];
-$buy_url=$array['acf']['buy_now_url'];
 $video_1_url=$array['acf']['video_1_url'];
 if (strpos($video_1_url,'youtube.com') !== false) {
   if (strpos($video_1_url,'watch') !== false) {
@@ -165,11 +164,6 @@ $related_products = do_shortcode('[aff_products]');
     $content .= '<a class="btn btn-info btn-block" href="'.$walmart_url.'" role="button" target="_blank">View on Walmart</a>';
     $content .= '</div>';
     }
- if ($buy_url){
- $content .= '<div class="col-12 pb-3">';
- $content .= '<a class="btn btn-danger btn-block" href="'.$buy_url.'" role="button" target="_blank">Buy Now</a>';
- $content .= '</div>';
- }
  
  if ($video_1_url || $video_2_url || $video_3_url || $video_4_url){
   $content .= '<div class="col-12 d-block d-md-none">';
