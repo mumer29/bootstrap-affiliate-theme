@@ -19,6 +19,7 @@ function aff_products_shortcode( $atts = [], $content = null, $tag = '' ) {
 	if($taxonomy_id && $taxonomy_slug){
 		$json_url .= $taxonomy_id;
 	}
+	
 	$json = file_get_contents($json_url);
 	$array = json_decode($json,true);
 	$content = '  <div class="row m-0">';
